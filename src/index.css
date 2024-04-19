@@ -85,7 +85,6 @@
 }
 
 .main {
-  
   width: 100%;
   height: 100vh;
 }
@@ -148,5 +147,21 @@ video {
 }
 
 .h3.rounded-xl.shadow-md.shadow-gray-500 {
-  margin-left: 3cm; /* Adjust for pixel equivalent if needed */
+  margin-left: 3cm;
+}
+
+.carousel {
+  display: ruby-text;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  top: 0;
+}
+.justify-center {
+  justify-content: center;
+}
+.background {
+  background-color: black;
 }
