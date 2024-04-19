@@ -66,7 +66,6 @@ function HomePage() {
       <div className="content">
         <div className="navbar">
           <div className="none gap-1">
-            
             <Link to="/images">
               <button className="btn btn-ghost btn-circle avatar">
                 <div className="w-12 rounded-full">
