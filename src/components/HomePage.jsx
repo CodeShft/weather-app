@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import videoBg from "../video/videoBg.mp4";
 import Card from "./Card";
 import { Link } from "react-router-dom";
 import "../App.css";
@@ -60,9 +59,10 @@ function HomePage() {
   return (
     <div className="main">
       <div className="overlay"></div>
-      <video autoPlay loop muted>
-        <source src={videoBg} type="video/mp4" />
-      </video>
+      <img className="img1"
+        src="https://img.wattpad.com/3ca9049f615909f4bf69023c3e5b6f98dc777621/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4a5937526b2d5264566f555631673d3d2d3931363430313933372e3136336337666263663461353465613536303537313931323939372e676966"
+        alt="Background GIF"
+      />
       <div className="content">
         <div className="navbar">
           <div className="none gap-1">
