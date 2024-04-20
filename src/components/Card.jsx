@@ -27,17 +27,18 @@ function convertEpoch(value) {
 
 const Card = ({ currentWeather }) => {
   return (
+    
     <div className="flex justify-center items-center">
-      <div className="card card-compact w-95 bg-base-100  shadow-md shadow-gray-500 my-30 mx-auto">
+      <div className=" card-compact bg-base-100  shadow-md shadow-gray-500 my-30 mx-auto">
         <div className="card-body">
           <table className="table table-sm rounded-sm">
             <thead className="thead">
               <tr>
-                <th className="text-bold ">Tarih</th>
-                <th className="text-bold">Hava Durumu</th>
-                <th className="text-bold">Sıcaklık</th>
-                <th className="text-bold">Nem</th>
-                <th className="text-bold">Rüzgar</th>
+                <th >Tarih</th>
+                <th >Hava Durumu</th>
+                <th >Sıcaklık</th>
+                <th >Nem</th>
+                <th >Rüzgar</th>
               </tr>
             </thead>
             <tbody>

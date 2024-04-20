@@ -41,12 +41,14 @@
 .footer {
   display: flex;
   align-items: center;
-  min-height: 4rem;
-  width: 100%;
-  align-content: flex-start;
   justify-content: center;
   background-color: white;
+  margin-top: auto;
+  align-items: flex-end; 
+  object-fit: cover;
+
 }
+
 
 .weather1 {
   font-weight: bold;
@@ -67,6 +69,9 @@
 
 .text-bold {
   font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-family: sans-serif;
 }
 .thead {
   color: rgb(192, 63, 24);
@@ -80,36 +85,20 @@
 }
 
 .main {
-  overflow: hidden;
-}
-
-.img1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url(assets/backgroundgif.gif) no-repeat;
+  background-size: cover;
+  height: calc(100vh - navbar-height);
 }
 
 .content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
-
-.text-bold {
-  font-weight: 700;
-  color: rgb(0, 0, 0);
+  padding: 40px;
 }
 
 .h1 {
@@ -118,30 +107,31 @@
   font-size: 40px;
   color: rgb(15, 15, 15);
 }
+.card-compact {
+  opacity: 0.8;
+  margin: 0 auto;
+  overflow: auto;
+}
 
-.card {
-  margin: 7px;
+.card-compact .card-body {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   -o-object-fit: cover;
   object-fit: cover;
-  opacity: 0.8;
   background-color: rgb(166 174 203);
-  max-height: 400px;
   overflow-y: auto;
+  position: relative;
 }
 
 .h3 {
-  margin-left: 3cm;
   .rounded-xl {
     border-radius: 0.9rem;
+    overflow: auto;
   }
-}
-.rounded-sm {
-  border-radius: 0.125rem;
-  font: -webkit-control;
 }
 
 .shadow-gray-500 {
-  --tw-shadow-color: #020202;
+  --tw-shadow-color: #161616;
 }
 
 .carousel {
