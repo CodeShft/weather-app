@@ -30,7 +30,7 @@ const Card = ({ currentWeather }) => {
     
     <div className="flex justify-center items-center">
       <div className=" card-compact bg-base-100  shadow-md shadow-gray-500 my-30 mx-auto">
-        <div className="card-body">
+        <div className="card-body overflow-x-auto">
           <table className="table table-sm rounded-sm">
             <thead className="thead">
               <tr>
