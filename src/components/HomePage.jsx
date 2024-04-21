@@ -6,30 +6,30 @@ import Background from "./Background";
 import Card from "./Card";
 
 function HomePage() {
-  const [locationName, setLocationName] = useState(null);
-  const [currentWeather, setCurrentWeather] = useState();
-  const [location, setLocation] = useState("");
-  const [weatherId, setWeatherId] = useState(null);
-
-  const API_KEY = "78d8ff879664f60bbc5fe7d5392e503c";
-
-  useEffect(() => {
-    getLocation();
-  });
-
-  const getLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        const lat = position.coords.latitude;
-        const long = position.coords.longitude;
-        const obj = {
-          lat: lat,
-          long: long,
-        };
-        searchLocation(obj, "latlong");
-      });
-    }
-  };
+	const [locationName, setLocationName] = useState(null);
+	const [currentWeather, setCurrentWeather] = useState();
+	const [location, setLocation] = useState("");
+	const [weatherId, setWeatherId] = useState(null);
+  
+	const API_KEY = "78d8ff879664f60bbc5fe7d5392e503c";
+  
+	useEffect(() => {
+	  getLocation(); 
+	}, []);
+  
+	const getLocation = () => {
+	  if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition((position) => {
+		  const lat = position.coords.latitude;
+		  const long = position.coords.longitude;
+		  const obj = {
+			lat: lat,
+			long: long,
+		  };
+		  searchLocation(obj, "latlong");
+		});
+	  }
+	};
 
   const searchLocation = async (query, type = "search") => {
     let API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${query}&appid=${API_KEY}&units=metric&lang=tr`;
