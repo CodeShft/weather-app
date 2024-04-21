@@ -109,6 +109,7 @@
   opacity: 0.9;
   margin: 0 auto;
   overflow: auto;
+  border-radius: 5px;
 }
 
 .card-compact .card-body {
@@ -116,9 +117,10 @@
   line-height: 1.25rem;
   -o-object-fit: cover;
   object-fit: cover;
-  background-color: rgb(198, 189, 202);
+  background-color: rgb(199, 190, 202);
   overflow-y: auto;
   position: relative;
+  
 }
 
 .h3 {
@@ -129,7 +131,7 @@
 }
 
 .shadow-gray-500 {
-  --tw-shadow-color: rgb(51, 2, 40);
+  --tw-shadow-color: rgb(83, 63, 83);
 }
 
 .carousel {
