@@ -1,49 +1,46 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 function convertEpoch(value) {
-  if (!value) {
-    return "";
-  }
-  const time = new Date(Number(value * 1000));
-  if (isNaN(time.valueOf())) {
-    return "";
-  }
-  // 2. Türkçe dil seçenekleri
-  const options = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    hour12: false,
-    timeZone: "Europe/Istanbul", // Ankara için zaman dilimini ayarlama
-  };
+	if (!value) {
+		return "";
+	}
+	const time = new Date(Number(value * 1000));
+	if (Number.isNaN(time.valueOf())) {
+		return "";
+	}
+	// 2. Türkçe dil seçenekleri
+	const options = {
+		weekday: "long",
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+		hour: "numeric",
+		minute: "numeric",
+		hour12: false,
+		timeZone: "Europe/Istanbul", // Ankara için zaman dilimini ayarlama
+	};
 
-  // 3. Date objesini formatlama
-  const formattedDate = time.toLocaleDateString("tr-TR", options);
-  return formattedDate;
+	// 3. Date objesini formatlama
+	const formattedDate = time.toLocaleDateString("tr-TR", options);
+	return formattedDate;
 }
 
-const Card = ({ currentWeather }) => {
+export default function Card({currentWeather}) {
   return (
-    
-    <div className="flex justify-center items-center">
-      <div className=" card-compact bg-base-100  shadow-md shadow-gray-500 my-30 mx-auto">
-        <div className="card-body overflow-x-auto">
-          <table className="table table-sm rounded-sm">
+        <div className="overflow-x-auto">
+          <table className="table">
             <thead className="thead">
               <tr>
-                <th >Tarih</th>
-                <th >Hava Durumu</th>
-                <th >Sıcaklık</th>
-                <th >Nem</th>
-                <th >Rüzgar</th>
+                <th>Tarih</th>
+                <th>Hava Durumu</th>
+                <th>Sıcaklık</th>
+                <th>Nem</th>
+                <th>Rüzgar</th>
               </tr>
             </thead>
             <tbody>
-              {currentWeather.map((item, index) => (
-                <tr key={index}>
+              {currentWeather.map((item) => (
+                <tr key={item.dt}>
                   <td className="text-bold">{convertEpoch(item.dt, "date")}</td>
                   <td className="flex items-center">
                     <img
@@ -56,7 +53,7 @@ const Card = ({ currentWeather }) => {
                     </span>
                   </td>
                   <td className="text-bold">
-                    {item.main.temp} derece (hissedilen: {item.main.feels_like})
+                    {item.main.temp.toFixed(1)} C° (hissedilen: {item.main.feels_like.toFixed(1)} C°)
                   </td>
                   <td className="text-bold">{item.main.humidity}</td>
                   <td className="text-bold">{item.wind.speed}</td>
@@ -65,9 +62,8 @@ const Card = ({ currentWeather }) => {
             </tbody>
           </table>
         </div>
-      </div>
-    </div>
   );
-};
-
-export default Card;
+}
+Card.propTypes = {
+  currentWeather: PropTypes.arrayOf(PropTypes.object).isRequired,
+}

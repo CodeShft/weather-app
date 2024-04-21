@@ -35,7 +35,9 @@
 
 .gif {
   height: auto;
-  max-width: 40px;
+  max-width: 35px;
+  position: relative;
+  top: 4px;
 }
 
 .footer {
@@ -54,84 +56,10 @@
   color: rgb(149 93 149);
   text-align: center;
 }
-
-.gap-2 {
-  gap: 0.4rem;
-}
-.p-4 {
-  padding: 0.3rem;
-}
-.p {
-  margin-top: initial;
-}
-
-.text-bold {
-  font-weight: 700;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  font-family: sans-serif;
-}
 .thead {
   color: rgb(192, 63, 24);
   font-weight: bold;
   font-size: medium;
-}
-@media (max-width: 768px) {
-  .card {
-    width: 100%;
-  }
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: url(assets/purplebackground.gif) no-repeat;
-  background-size: cover;
-  height: calc(100vh - navbar-height);
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
-}
-
-.h1 {
-  text-align: center;
-  font-weight: 700;
-  font-size: 40px;
-  color: rgb(20, 20, 20);
-}
-.card-compact {
-  opacity: 0.9;
-  margin: 0 auto;
-  overflow: auto;
-  border-radius: 5px;
-}
-
-.card-compact .card-body {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  -o-object-fit: cover;
-  object-fit: cover;
-  background-color: rgb(199, 190, 202);
-  overflow-y: auto;
-  position: relative;
-  
-}
-
-.h3 {
-  .rounded-xl {
-    border-radius: 0.9rem;
-    overflow: auto;
-  }
-}
-
-.shadow-gray-500 {
-  --tw-shadow-color: rgb(83, 63, 83);
 }
 
 .carousel {
@@ -143,6 +71,6 @@
   scrollbar-width: none;
   top: 0;
 }
-.justify-center {
-  justify-content: center;
+.background {
+  background: black;
 }
