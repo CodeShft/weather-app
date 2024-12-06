@@ -56,10 +56,71 @@
   color: rgb(149 93 149);
   text-align: center;
 }
-.thead {
-  color: rgb(192, 63, 24);
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.thead th {
+  color: rgb(192, 63, 24); /* Orange (Turuncu) color */
   font-weight: bold;
   font-size: medium;
+  padding: 10px;
+  background-color: transparent;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Table Body Style */
+tbody td {
+  padding: 8px 12px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  /* On mobile screens */
+  .thead th {
+    font-size: 14px; /* Smaller font size for table header on mobile */
+    padding: 8px; /* Smaller padding */
+  }
+
+  tbody td {
+    font-size: 12px; /* Smaller font size for table body on mobile */
+    padding: 6px 10px; /* Smaller padding */
+  }
+
+  .text-bold {
+    font-size: 12px; /* Smaller font size for text inside the table on mobile */
+  }
+
+  .w-8 {
+    width: 24px; /* Make icons smaller on mobile */
+  }
+
+  .h-8 {
+    height: 24px; /* Make icons smaller on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  /* On very small screens like phones in portrait mode */
+  .thead th {
+    font-size: 12px; /* Even smaller font size */
+    padding: 6px; /* Even smaller padding */
+  }
+
+  tbody td {
+    font-size: 10px; /* Even smaller font size for table body */
+    padding: 4px 8px; /* Even smaller padding */
+  }
+
+  .w-6 {
+    width: 18px; /* Make icons even smaller */
+  }
+
+  .h-6 {
+    height: 18px; /* Make icons even smaller */
+  }
 }
 
 .carousel {
