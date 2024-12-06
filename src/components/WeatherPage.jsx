@@ -11,11 +11,11 @@ const WeatherPage = () => {
           const { latitude, longitude } = position.coords;
           console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
           setLocation({ latitude, longitude });
-          setError(null);  // Clear any previous error
+          setError(null); // Clear any previous error
         },
         (error) => {
           console.error("Geolocation error:", error);
-          setError("Konum izni verilmedi veya cihazınızda konum servisi kapalı.");
+          setError("");
         }
       );
     } else {
