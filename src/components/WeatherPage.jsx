@@ -39,55 +39,63 @@ const WeatherPage = () => {
   }, []);
 
   return (
-    <div className="background">
+    <div className="background bg-black">
       <div className="h-screen flex justify-center items-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 px-1">
           <div className="card1 w-full">
             <img
               src="https://i.gifer.com/5yb.gif"
-              className="object-cover h-24 md:h-48 w-full"
+              className="object-cover w-full h-24 md:h-32"
+              alt="Weather GIF 1"
             />
           </div>
           <div className="card1 w-full">
             <img
               src="https://i.gifer.com/embedded/download/OcT6.gif"
-              className="object-cover h-24 md:h-48 w-full"
+              className="object-cover w-full h-24 md:h-32"
+              alt="Weather GIF 2"
             />
           </div>
           <div className="card1 w-full">
             <img
               src="https://i.pinimg.com/originals/c1/a9/3a/c1a93a1d0de0059a3119b8b1a55ce582.gif"
-              className="object-cover h-24 md:h-48 w-full"
+              className="object-cover w-full h-24 md:h-32"
+              alt="Weather GIF 3"
             />
           </div>
           <div className="card1 w-full">
             <img
               src="https://www.sakarya54.net/wp-content/uploads/2022/12/supercell1.gif"
-              className="object-cover h-24 md:h-48 w-full"
+              className="object-cover w-full h-24 md:h-32"
+              alt="Weather GIF 4"
             />
           </div>
           <div className="card1 w-full">
             <img
               src="https://taylorsciencegeeks.weebly.com/uploads/5/9/2/0/59201005/562505546.gif"
-              className="object-cover h-24 md:h-48 w-full"
+              className="object-cover w-full h-24 md:h-32"
+              alt="Weather GIF 5"
             />
           </div>
           <div className="card1 w-full">
             <img
               src="https://24.media.tumblr.com/cc99ef01499bce32e50fe73641594856/tumblr_mfzrh8wvg41s0v7f4o1_500.gif"
-              className="object-cover h-24 md:h-48 w-full"
+              className="object-cover w-full h-24 md:h-32"
+              alt="Weather GIF 6"
             />
           </div>
           <div className="card1 w-full">
             <img
               src="https://www.icegif.com/wp-content/uploads/2022/02/icegif-544.gif"
-              className="object-cover h-24 md:h-48 w-full"
+              className="object-cover w-full h-24 md:h-32"
+              alt="Weather GIF 7"
             />
           </div>
           <div className="card1 w-full">
             <img
               src="https://i.pinimg.com/originals/51/9a/83/519a837a74de5c3a0638a40a31ae0324.gif"
-              className="object-cover h-24 md:h-48 w-full"
+              className="object-cover w-full h-24 md:h-32"
+              alt="Weather GIF 8"
             />
           </div>
         </div>
