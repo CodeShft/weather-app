@@ -41,11 +41,6 @@ const WeatherPage = () => {
   return (
     <div className="background">
       <div className="h-screen flex justify-center items-center">
-        {location && (
-          <p>
-            Konum: {location.latitude}, {location.longitude}
-          </p>
-        )}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
           <div className="card1 w-full">
             <img
