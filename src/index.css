@@ -78,48 +78,48 @@ tbody td {
 }
 
 @media (max-width: 768px) {
-  /* On mobile screens */
+ 
   .thead th {
-    font-size: 14px; /* Smaller font size for table header on mobile */
-    padding: 8px; /* Smaller padding */
+    font-size: 14px; 
+    padding: 8px; 
   }
 
   tbody td {
-    font-size: 12px; /* Smaller font size for table body on mobile */
-    padding: 6px 10px; /* Smaller padding */
+    font-size: 12px; 
+    padding: 6px 10px; 
   }
 
   .text-bold {
-    font-size: 12px; /* Smaller font size for text inside the table on mobile */
+    font-size: 12px; 
   }
 
   .w-8 {
-    width: 24px; /* Make icons smaller on mobile */
+    width: 24px; 
   }
 
   .h-8 {
-    height: 24px; /* Make icons smaller on mobile */
+    height: 24px; 
   }
 }
 
 @media (max-width: 480px) {
   /* On very small screens like phones in portrait mode */
   .thead th {
-    font-size: 12px; /* Even smaller font size */
-    padding: 6px; /* Even smaller padding */
+    font-size: 12px; 
+    padding: 6px;
   }
 
   tbody td {
-    font-size: 10px; /* Even smaller font size for table body */
-    padding: 4px 8px; /* Even smaller padding */
+    font-size: 10px; 
+    padding: 4px 8px; 
   }
 
   .w-6 {
-    width: 18px; /* Make icons even smaller */
+    width: 18px; 
   }
 
   .h-6 {
-    height: 18px; /* Make icons even smaller */
+    height: 18px; 
   }
 }
 
