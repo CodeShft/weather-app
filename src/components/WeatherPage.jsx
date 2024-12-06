@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 const WeatherPage = () => {
   const [location, setLocation] = useState(null);
+  const [error, setError] = useState(null);
 
   const getLocation = () => {
     if (navigator.geolocation) {
@@ -10,13 +11,15 @@ const WeatherPage = () => {
           const { latitude, longitude } = position.coords;
           console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
           setLocation({ latitude, longitude });
+          setError(null);  // Clear any previous error
         },
         (error) => {
           console.error("Geolocation error:", error);
+          setError("Konum izni verilmedi veya cihazınızda konum servisi kapalı.");
         }
       );
     } else {
-      console.error("Geolocation is not supported by this browser.");
+      setError("Geolocation bu tarayıcı tarafından desteklenmiyor.");
     }
   };
 
@@ -27,6 +30,7 @@ const WeatherPage = () => {
   return (
     <div className="background">
       <div className="h-screen flex justify-center items-center">
+        {error && <p className="text-red-500">{error}</p>}
         {location && (
           <p>
             Konum: {location.latitude}, {location.longitude}
