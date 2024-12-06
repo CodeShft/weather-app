@@ -1,20 +1,22 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const WeatherPage = () => {
   const [location, setLocation] = useState(null);
 
   const getLocation = () => {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        const { latitude, longitude } = position.coords;
-        console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
-        setLocation({ latitude, longitude });
-        // Burada hava durumu API'sine istek yapabilirsiniz.
-      }, (error) => {
-        console.error('Geolocation error:', error);
-      });
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+          setLocation({ latitude, longitude });
+        },
+        (error) => {
+          console.error("Geolocation error:", error);
+        }
+      );
     } else {
-      console.error('Geolocation is not supported by this browser.');
+      console.error("Geolocation is not supported by this browser.");
     }
   };
 
@@ -25,7 +27,11 @@ const WeatherPage = () => {
   return (
     <div className="background">
       <div className="h-screen flex justify-center items-center">
-        {location && <p>Konum: {location.latitude}, {location.longitude}</p>}
+        {location && (
+          <p>
+            Konum: {location.latitude}, {location.longitude}
+          </p>
+        )}
         <div className="grid grid-cols-3 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <div className="card1 w-full">
             <img
