@@ -62,7 +62,7 @@
 }
 
 .thead th {
-  color: rgb(192, 63, 24); /* Orange (Turuncu) color */
+  color: rgb(192, 63, 24);
   font-weight: bold;
   font-size: medium;
   padding: 10px;
@@ -103,10 +103,9 @@ tbody td {
 }
 
 @media (max-width: 480px) {
-  /* On very small screens like phones in portrait mode */
   .thead th {
     font-size: 12px; 
-    padding: 6px;
+    padding: 17px;
   }
 
   tbody td {
@@ -134,4 +133,39 @@ tbody td {
 }
 .background {
   background: black;
+}
+/* Basic styles */
+.weather-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-icon {
+  width: 32px; 
+  height: 32px;
+  margin-bottom: 8px;  
+}
+
+.weather-text {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+@media (min-width: 640px) {
+  .weather-description {
+    flex-direction: row;  
+    align-items: center;
+  }
+
+  .weather-icon {
+    margin-bottom: 0;  
+    margin-right: 8px; 
+  }
+
+  .weather-text {
+    font-size: 16px;  
+  }
 }
