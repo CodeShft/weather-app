@@ -6,7 +6,7 @@ function App() {
     <div>
       <Routes>
         <Route index element={<HomePage />} />
-        <Route path="/weather" element={<WeatherPage />} />
+        <Route exact path="/images" element={<WeatherPage />} />
       </Routes>
     </div>
   );
