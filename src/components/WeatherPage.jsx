@@ -50,7 +50,7 @@ const WeatherPage = () => {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 px-1">
           <div className="card1 w-full">
             <img
-              src="https://i.gifer.com/5yb.gif"
+              src="https://media3.giphy.com/media/7Bgpw7PwdxoDC/200.gif?cid=6c09b952klmg0j598m4czjfx9yapif1qvotbfcesrbyadhvn&ep=v1_gifs_search&rid=200.gif&ct=g"
               className="object-cover w-full h-24 md:h-32"
               alt="Weather GIF 1"
             />
