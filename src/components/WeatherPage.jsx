@@ -11,21 +11,27 @@ const WeatherPage = () => {
           const { latitude, longitude } = position.coords;
           console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
           setLocation({ latitude, longitude });
-          setError(null); 
+          setError(null);
         },
         (error) => {
           switch (error.code) {
             case error.PERMISSION_DENIED:
-              setError("Location access was denied. Please allow location access to continue.");
+              setError(
+                "Location access was denied. Please allow location access to continue."
+              );
               break;
             case error.POSITION_UNAVAILABLE:
-              setError("Unable to retrieve your location. Please try again later.");
+              setError(
+                "Unable to retrieve your location. Please try again later."
+              );
               break;
             case error.TIMEOUT:
               setError("Location retrieval timed out. Please try again later.");
               break;
             default:
-              setError("An unknown error occurred while retrieving your location.");
+              setError(
+                "An unknown error occurred while retrieving your location."
+              );
           }
         }
       );
