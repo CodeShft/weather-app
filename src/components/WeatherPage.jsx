@@ -65,7 +65,7 @@ const WeatherPage = () => {
           </div>
           <div className="card1 w-full">
             <img
-              src="https://www.sakarya54.net/wp-content/uploads/2022/12/supercell1.gif"
+              src="https://www.thisiscolossal.com/wp-content/uploads/2015/01/storm-2.gif"
               className="object-cover w-full h-24 md:h-32"
               alt="Weather GIF 4"
             />
