@@ -60,7 +60,7 @@ function HomePage() {
       <Background weatherId={weatherId} />
       <div className="navbar z-10">
         <div className="none gap-1">
-          <Link to="/images">
+          <Link to="/">
             <button type="button" className="btn btn-ghost btn-circle avatar">
               <div className="w-12 rounded-full">
                 <img
